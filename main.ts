@@ -120,3 +120,112 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . f f f f f . f f f f f . . 
+    . . f f 3 3 3 f f f 3 3 3 f f . 
+    . . f 3 3 3 3 3 f 3 3 3 3 3 f . 
+    . . f 3 3 3 3 3 3 3 1 1 3 3 f . 
+    . . f 3 3 3 3 3 3 3 1 1 3 3 f . 
+    . . f 3 3 3 3 3 3 3 3 3 3 3 f . 
+    . . f f 3 3 3 b b b 3 3 3 f f . 
+    . . . f f 3 b b b b b 3 f f . . 
+    . . . . f f b b b b b f f . . . 
+    . . . . . f f b b b f f . . . . 
+    . . . . . . f f b f f . . . . . 
+    . . . . . . . f f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Player)
+animation.runImageAnimation(
+mySprite,
+[img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . f f f f f . f f f f f . . 
+    . . f f 3 3 3 f f f 3 3 3 f f . 
+    . . f 3 3 3 3 3 f 3 3 3 3 3 f . 
+    . . f 3 3 3 3 3 3 3 1 1 3 3 f . 
+    . . f 3 3 3 3 3 3 3 1 1 3 3 f . 
+    . . f 3 3 3 3 3 3 3 3 3 3 3 f . 
+    . . f f 3 3 3 b b b 3 3 3 f f . 
+    . . . f f 3 b b b b b 3 f f . . 
+    . . . . f f b b b b b f f . . . 
+    . . . . . f f b b b f f . . . . 
+    . . . . . . f f b f f . . . . . 
+    . . . . . . . f f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . f f f f f f . f f f f f f . 
+    . f f 3 3 3 3 f f f 3 3 3 3 f f 
+    . f 3 3 3 3 3 3 f 3 3 3 3 3 3 f 
+    . f 3 3 3 3 3 3 3 3 1 1 1 3 3 f 
+    . f 3 3 3 3 3 3 3 3 1 1 1 3 3 f 
+    . f 3 3 3 3 3 b b b 1 1 1 3 3 f 
+    . f 3 3 3 3 b b b b b 3 3 3 3 f 
+    . f f 3 3 b b b b b b b 3 3 f f 
+    . . f f 3 b b b b b b b 3 f f . 
+    . . . f f b b b b b b b f f . . 
+    . . . . f f b b b b b f f . . . 
+    . . . . . f f b b b f f . . . . 
+    . . . . . . f f b f f . . . . . 
+    . . . . . . . f f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . f f f . f f f . . . . 
+    . . . . f 3 3 3 f 3 3 3 f . . . 
+    . . . . f 3 3 3 3 3 1 3 f . . . 
+    . . . . f 3 3 3 3 3 3 3 f . . . 
+    . . . . . f 3 b b b 3 f . . . . 
+    . . . . . f f b b b f f . . . . 
+    . . . . . . f f b f f . . . . . 
+    . . . . . . . f f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `,img`
+    . . . . . . . . . . . . . . . . 
+    . . b b b b c . . c b b b c . . 
+    . b d 1 1 1 3 c c 3 d 1 1 3 c . 
+    b d 1 1 1 1 d d 1 3 1 1 1 1 3 c 
+    b 1 1 1 1 1 d 1 1 d d 1 1 1 1 b 
+    c 3 1 1 d c c 1 1 c c 1 1 1 1 b 
+    c 3 3 d 3 . . c c . . d 1 1 d b 
+    b 1 1 1 3 . . . . . . 3 d d 3 c 
+    b 1 1 1 d b . . . . c d d 3 3 c 
+    c 3 1 1 1 1 c . . b 1 1 1 d b c 
+    . c d d 1 1 1 c b 3 1 1 1 1 c . 
+    . . c 1 1 1 d d 3 3 1 1 1 b . . 
+    . . . b 1 3 d 1 1 d d 3 b . . . 
+    . . . . b 3 1 1 1 1 d c . . . . 
+    . . . . . c b 1 1 b c . . . . . 
+    . . . . . . c b b c . . . . . . 
+    `,img`
+    . . . 3 3 . 3 3 . . . . . . . . 
+    . . 3 3 1 3 1 3 3 . . . . . . . 
+    . . 3 1 1 1 1 1 3 . . 3 . 3 . . 
+    . . . 3 1 1 1 3 . . 3 1 3 1 3 . 
+    . . . . 3 1 3 . . . 3 1 1 1 3 . 
+    . . . . . 3 . . . . . 3 1 3 . . 
+    . . . . . . . . . . . . 3 . . . 
+    3 3 . 3 3 . . . . . . . . . . . 
+    3 1 1 1 3 . . . . . 3 3 . 3 3 . 
+    . 3 1 3 . . . . . . 3 1 3 1 3 . 
+    . . 3 . . . . . . . 3 1 1 1 3 . 
+    . . . . . 3 . 3 . . . 3 1 3 . . 
+    . . . . . 1 1 1 . . . . 3 . . . 
+    . . . . . 3 1 3 . . . . . . . . 
+    . . . . . . 3 . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `],
+200,
+true
+)
