@@ -229,3 +229,9 @@ mySprite,
 200,
 true
 )
+animation.runMovementAnimation(
+mySprite,
+animation.animationPresets(animation.shake),
+2000,
+true
+)
